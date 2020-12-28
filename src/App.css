@@ -14,14 +14,20 @@
 }
 
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
+  /* background-color: #282c34; */
+  min-height: 15vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
   color: white;
+  background: url("./resources/images/headerBar.jpg") no-repeat;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -ms-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
 }
 
 .App-navbar {
@@ -37,6 +43,10 @@
 
 .App-link {
   color: #61dafb;
+}
+
+.divSpacing {
+  min-height: 6vh;
 }
 
 .navbar_button {

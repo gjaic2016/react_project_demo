@@ -6,11 +6,11 @@ const NavBar = () => {
     <>
       <div className="navbar_wrapper" >
         <div >
-          <Button variant="primary">Početna</Button>
-          <Button variant="primary">Oglasi</Button>
-          <Button variant="primary">O nama</Button>
-          <Button variant="primary">Registracija</Button>
-          <Button variant="primary">Prijava</Button>
+          <Button variant="dark">Početna</Button>
+          <Button variant="dark">Oglasi</Button>
+          <Button variant="dark">O nama</Button>
+          <Button variant="dark">Registracija</Button>
+          <Button variant="dark">Prijava</Button>
         </div>
       </div>
     </>
