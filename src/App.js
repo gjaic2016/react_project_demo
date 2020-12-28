@@ -1,6 +1,7 @@
 import "./App.css";
-import Home from "./components/Home/Home";
-import NavBar from "./components/NavBar/NavBar";
+import Home from "./components/Home/HomeContainer";
+import LoginContainer from "./components/Login/LoginContainer";
+import NavBar from "./components/NavBar/NavBarContainer";
 
 const App = (props) => {
   return (
@@ -8,18 +9,14 @@ const App = (props) => {
       <header className="App-header">
         <div className="App-link">
           QUICKFIX
+          <div className="divSpacing"></div>
+        </div>
+        <div className="App-navbar">
+          <NavBar />
         </div>
       </header>
-      <div className="App-navbar">
-        <NavBar />
-      </div>
       <Home />
-      {/* <body>
-        <a>
-
-        BODY
-        </a>
-      </body> */}
+      <LoginContainer/>
     </div>
   );
 };

@@ -1,7 +1,8 @@
-import React from "react";
+import React, { Component } from "react";
 import NavBar from "./NavBar";
 
-class NavBarContainer {
+class NavBarContainer extends Component {
+  state = {};
   render() {
     return <NavBar />;
   }
