@@ -1,9 +1,11 @@
+import React from "react";
+import { Route } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home/HomeContainer";
-import LoginContainer from "./components/Login/LoginContainer";
-import NavBar from "./components/NavBar/NavBarContainer";
+import Home from "./components/Home";
+import Login from "./components/Login";
+import NavBar from "./components/NavBar";
 
-const App = (props) => {
+const App = () => {
   return (
     <div className="App">
       <header className="App-header">
@@ -15,8 +17,12 @@ const App = (props) => {
           <NavBar />
         </div>
       </header>
-      <Home />
-      <LoginContainer/>
+      <body>
+        <div className="content">
+          <Route path="/login" component={Login} />
+          <Route path="/" exact component={Home} />
+        </div>
+      </body>
     </div>
   );
 };

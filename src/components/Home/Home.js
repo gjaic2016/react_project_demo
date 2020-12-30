@@ -9,7 +9,7 @@ const Home = () => {
         <div className="divSpacing"></div>
         <Row>
           <Col>
-            <img src={Fix}></img>
+            <img src={Fix} alt=""></img>
           </Col>
           <Col>
             <div class="col-md-6">
@@ -17,7 +17,6 @@ const Home = () => {
             </div>
           </Col>
         </Row>
-        <div className="divSpacing"></div>
         <Row>
           <Jumbotron>
             <Container>

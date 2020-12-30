@@ -4,7 +4,11 @@ import Login from "../Login/Login";
 class LoginContainer extends Component {
   state = {};
   render() {
-    return <Login />;
+    return (
+      <div>
+        <Login />
+      </div>
+    );
   }
 }
 

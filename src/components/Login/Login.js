@@ -4,8 +4,10 @@ import { Button } from "react-bootstrap";
 const Login = () => {
   return (
     <>
-      <div className="navbar_wrapper" >
-        <Button>Prijava</Button>
+      <div className="container">
+        <div className="navbar_wrapper">
+          <Button>Prijava</Button>
+        </div>
       </div>
     </>
   );
