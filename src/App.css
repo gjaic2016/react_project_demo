@@ -56,11 +56,16 @@
   border: 1px solid transparent;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.login-fix {
+  text-align: center;
+}
+
+.card-styling {
+  width: 23rem;
+  height: 27em;
+  margin-top: 5vh;
+  margin-left: auto;
+  margin-right: auto;
+  border-color: 10px black;
+  
 }

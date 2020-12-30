@@ -9,7 +9,7 @@ const Home = () => {
         <div className="divSpacing"></div>
         <Row>
           <Col className="col-md-6">
-            <img src={Fix} alt=""></img>
+            <img src={Fix} alt="" width="50%" ></img>
           </Col>
           <Col className="col-md-6">
             <div >

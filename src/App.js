@@ -4,7 +4,8 @@ import "./App.css";
 import Home from "./components/Home";
 import Login from "./components/Login";
 import NavBar from "./components/NavBar";
-import About from './components/About';
+import About from "./components/About";
+import Registration from './components/Registration';
 
 const App = () => {
   return (
@@ -19,14 +20,14 @@ const App = () => {
         </div>
       </header>
       <body>
-        <div className="content">
+      </body>
+        <div className="content body">
           <Route path="/adds" component={Login} />
-          <Route path="/registration" component={Login} />
+          <Route path="/registration" component={Registration} />
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/" exact component={Home} />
         </div>
-      </body>
     </div>
   );
 };
