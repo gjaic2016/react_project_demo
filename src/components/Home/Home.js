@@ -8,11 +8,11 @@ const Home = () => {
       <div className="container">
         <div className="divSpacing"></div>
         <Row>
-          <Col>
+          <Col className="col-md-6">
             <img src={Fix} alt=""></img>
           </Col>
-          <Col>
-            <div class="col-md-6">
+          <Col className="col-md-6">
+            <div >
               <h2>Freelancers guild for quick fix and a quick buck!</h2>
             </div>
           </Col>
