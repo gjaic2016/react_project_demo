@@ -7,6 +7,7 @@ import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Registration from './components/Registration';
 import Adds from './components/Adds';
+import NotFound from "./components/NotFound";
 
 const App = () => {
   return (
@@ -28,6 +29,7 @@ const App = () => {
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/" exact component={Home} />
+          <Route path="*" component={NotFound} />
         </div>
     </div>
   );
