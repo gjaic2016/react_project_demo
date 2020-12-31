@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Adds from "../Adds/Adds";
+import Adds from "./Adds";
 
 class AddsContainer extends Component {
   state = {};

@@ -1,13 +1,13 @@
 import React from "react";
 import { Route } from "react-router-dom";
 import "./App.css";
-import Home from "./components/Home";
-import Login from "./components/Login";
+import Home from "./components/page/Home";
+import Login from "./components/page/Login";
 import NavBar from "./components/NavBar";
-import About from "./components/About";
-import Registration from './components/Registration';
-import Adds from './components/Adds';
-import NotFound from "./components/NotFound";
+import About from "./components/page/About";
+import Registration from './components/page/Registration';
+import Adds from './components/page/Adds';
+import NotFound from "./components/page/NotFound";
 
 const App = () => {
   return (

@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Jumbotron, Row } from "react-bootstrap";
-import noimage from "../../resources/images/noimage.jpeg";
+import noimage from "../../../resources/images/noimage.jpeg";
 
 const Adds = () => {
   return (

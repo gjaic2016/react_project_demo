@@ -1,6 +1,6 @@
 import React from "react";
 import { Col, Container, Jumbotron, Row } from "react-bootstrap";
-import Fix from "../../resources/images/fix.jpg";
+import Fix from "../../../resources/images/fix.jpg";
 
 const Home = () => {
   return (
