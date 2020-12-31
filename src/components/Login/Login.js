@@ -5,7 +5,7 @@ const Login = () => {
   return (
     <>
       <div className="container">
-        <Card className="card-styling login-fix shadow">
+        <Card className="card-styling-log shadow">
           <Card.Header>
             <h2>Prijava</h2>
           </Card.Header>

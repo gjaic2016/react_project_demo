@@ -5,7 +5,7 @@ const Registration = () => {
   return (
     <>
       <div className="container">
-        <Card className="card-styling login-fix shadow">
+        <Card className="card-styling-reg shadow">
           <Card.Header>
             <h2>Registracija</h2>
           </Card.Header>
