@@ -1,12 +1,12 @@
 import React from "react";
-import { Route } from "react-router-dom";
+import { Route, Switch } from "react-router-dom";
 import "./App.css";
 import Home from "./components/page/Home";
 import Login from "./components/page/Login";
 import NavBar from "./components/NavBar";
 import About from "./components/page/About";
-import Registration from './components/page/Registration';
-import Adds from './components/page/Adds';
+import Registration from "./components/page/Registration";
+import Adds from "./components/page/Adds";
 import NotFound from "./components/page/NotFound";
 
 const App = () => {
@@ -21,16 +21,17 @@ const App = () => {
           <NavBar />
         </div>
       </header>
-      <body>
-      </body>
-        <div className="content body">
+      <body></body>
+      <div className="content body">
+        <Switch>
           <Route path="/adds" component={Adds} />
           <Route path="/registration" component={Registration} />
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />
           <Route path="/" exact component={Home} />
           <Route path="*" component={NotFound} />
-        </div>
+        </Switch>
+      </div>
     </div>
   );
 };
