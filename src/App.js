@@ -6,6 +6,7 @@ import Login from "./components/Login";
 import NavBar from "./components/NavBar";
 import About from "./components/About";
 import Registration from './components/Registration';
+import Adds from './components/Adds';
 
 const App = () => {
   return (
@@ -22,7 +23,7 @@ const App = () => {
       <body>
       </body>
         <div className="content body">
-          <Route path="/adds" component={Login} />
+          <Route path="/adds" component={Adds} />
           <Route path="/registration" component={Registration} />
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />

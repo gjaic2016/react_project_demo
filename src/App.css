@@ -77,3 +77,9 @@
   margin-right: auto;
   border-color: 10px black;
 }
+
+.jumbotron-add {
+  width: 100%;
+  min-height: 10em !important; 
+  max-height: 15em !important;
+}
