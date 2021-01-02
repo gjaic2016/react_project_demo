@@ -9,7 +9,7 @@ const AddComponent = (props) => {
         <Container>
           <Row>
             <Col className="col-md-2">
-              <img src={noimage} alt="" width="50%"></img>
+              <img src={props.picture ? props.picture : noimage} alt={props.picture} width="100%"></img>
             </Col>
             <Col className="col-md-10">
               <div>

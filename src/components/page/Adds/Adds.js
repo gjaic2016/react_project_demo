@@ -16,6 +16,8 @@ const Adds = () => {
     return () => clearTimeout(timer);
   }, []);
 
+  
+
   return (
     <>
       <div className="container">
@@ -29,6 +31,7 @@ const Adds = () => {
                 key={value.id}
                 title={value.title}
                 description={value.description}
+                picture={value.picture}
               />
             </>
           );
