@@ -13,7 +13,7 @@ const AddComponent = (props) => {
             </Col>
             <Col className="col-md-10">
               <div>
-                <p>{props.title}</p>
+                <p><h3>{props.title}</h3></p>
                 <p>{props.description}</p>
               </div>
             </Col>
