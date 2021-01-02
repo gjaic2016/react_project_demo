@@ -93,3 +93,8 @@
   white-space: nowrap;
   overflow: hidden;
 }
+
+.card-size {
+  height: fit-content;
+  display: inline-block;
+}

@@ -1,38 +1,39 @@
 import React from "react";
-import { Button, Card, FormControl, InputGroup } from "react-bootstrap";
+import { useState } from "react";
+import { Button, Card, Form, FormControl, InputGroup } from "react-bootstrap";
 
 const Login = () => {
+
+  const [username, setUsername] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <>
       <div className="container">
-        <Card className="card-styling-log shadow">
+        <Card className="card-styling-log card-size shadow">
           <Card.Header>
             <h2>Prijava</h2>
           </Card.Header>
           <Card.Body>
             <Card.Text>
-              <InputGroup size="sm" className="mb-3">
-                <InputGroup.Prepend>
-                  <InputGroup.Text id="inputGroup-sizing-sm">
-                    Username
-                  </InputGroup.Text>
-                </InputGroup.Prepend>
-                <FormControl
-                  aria-label="Small"
-                  aria-describedby="inputGroup-sizing-sm"
-                />
-              </InputGroup>
-              <InputGroup size="sm" className="mb-3">
-                <InputGroup.Prepend>
-                  <InputGroup.Text id="inputGroup-sizing-sm">
-                    Password
-                  </InputGroup.Text>
-                </InputGroup.Prepend>
-                <FormControl
-                  aria-label="Small"
-                  aria-describedby="inputGroup-sizing-sm"
-                />
-              </InputGroup>
+              <Form>
+                <Form.Group controlId="username">
+                  <Form.Control
+                    type="text"
+                    placeholder="Unesi korisničko ime"
+                    onChange={(e) => setUsername(e.target.value)}
+                  />
+                </Form.Group>
+              </Form>
+              <Form>
+                <Form.Group controlId="password">
+                  <Form.Control
+                    type="text"
+                    placeholder="Unesi lozinku"
+                    onChange={(e) => setPassword(e.target.value)}
+                  />
+                </Form.Group>
+              </Form>
             </Card.Text>
             <Button variant="primary">Prijava</Button>
           </Card.Body>
