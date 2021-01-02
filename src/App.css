@@ -80,6 +80,16 @@
 
 .jumbotron-add {
   width: 100%;
-  min-height: 10em !important; 
+  min-height: 10em !important;
   max-height: 15em !important;
+}
+
+.jumbotron {
+  padding: 2rem 1rem;
+}
+
+.break-word {
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  overflow: hidden;
 }

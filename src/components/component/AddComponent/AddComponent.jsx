@@ -9,11 +9,20 @@ const AddComponent = (props) => {
         <Container>
           <Row>
             <Col className="col-md-2">
-              <img src={props.picture ? props.picture : noimage} alt={props.picture} width="100%"></img>
+              <img
+                src={props.picture ? props.picture : noimage}
+                alt={props.picture}
+                width="150px"
+                height="150px"
+              ></img>
             </Col>
             <Col className="col-md-10">
               <div>
-                <p><h3>{props.title}</h3></p>
+                <p>
+                  <h3>{props.title}</h3>
+                </p>
+              </div>
+              <div className="break-word">
                 <p>{props.description}</p>
               </div>
             </Col>
