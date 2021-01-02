@@ -9,7 +9,7 @@ const Adds = () => {
     const timer = setTimeout(() => {
       console.log("Timeout called!");
       Axios.get("http://localhost:3001/getadds").then((response) => {
-        console.log(response.data);
+        console.log("Fetch adds trough api...");
         setAddsList(response.data);
       });
     }, 1000);

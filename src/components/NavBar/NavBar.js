@@ -10,7 +10,7 @@ const NavBar = () => {
           <Link to="/">
             <Button
               variant="dark"
-              class="btn btn-primary-outline navbar_button"
+              className="btn btn-primary-outline navbar_button"
             >
               Početna
             </Button>
@@ -18,7 +18,7 @@ const NavBar = () => {
           <Link to="/adds">
             <Button
               variant="dark"
-              class="btn btn-primary-outline navbar_button"
+              className="btn btn-primary-outline navbar_button"
             >
               Oglasi
             </Button>
@@ -26,7 +26,7 @@ const NavBar = () => {
           <Link to="/about">
             <Button
               variant="dark"
-              class="btn btn-primary-outline navbar_button"
+              className="btn btn-primary-outline navbar_button"
             >
               O nama
             </Button>
@@ -34,7 +34,7 @@ const NavBar = () => {
           <Link to="/registration">
             <Button
               variant="dark"
-              class="btn btn-primary-outline navbar_button"
+              className="btn btn-primary-outline navbar_button"
             >
               Registracija
             </Button>
@@ -42,7 +42,7 @@ const NavBar = () => {
           <Link to="/login">
             <Button
               variant="dark"
-              class="btn btn-primary-outline navbar_button"
+              className="btn btn-primary-outline navbar_button"
             >
               Prijava
             </Button>
