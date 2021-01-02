@@ -2,7 +2,7 @@ import React from "react";
 import { Col, Container, Jumbotron, Row } from "react-bootstrap";
 import noimage from "../../../resources/images/noimage.jpeg";
 
-const AddComponent = () => {
+const AddComponent = (props) => {
   return (
     <>
       <Jumbotron className="jumbotron-add">
@@ -13,7 +13,8 @@ const AddComponent = () => {
             </Col>
             <Col className="col-md-10">
               <div>
-                <p>Oglas Template</p>
+                <p>{props.title}</p>
+                <p>{props.description}</p>
               </div>
             </Col>
           </Row>
