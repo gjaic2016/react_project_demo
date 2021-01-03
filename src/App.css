@@ -98,3 +98,11 @@
   height: fit-content;
   display: inline-block;
 }
+
+.toast {
+  top: 0;
+  left: 50%;
+  position: fixed;
+  transform: translate(-50%, 0px);
+  z-index: 9999;
+}
