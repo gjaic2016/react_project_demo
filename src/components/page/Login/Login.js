@@ -2,8 +2,6 @@ import React, { useEffect } from "react";
 import Axios from "axios";
 import { useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
-// import Toast from "react-bootstrap/Toast";
-// import { Link } from "react-router-dom";
 
 const Login = () => {
   const [username, setUsername] = useState("");
@@ -15,16 +13,11 @@ const Login = () => {
 
   useEffect(() => {
     Axios.get("http://localhost:3001/login").then((response) => {
-      if(response.data.loggedIn == true) {
-
+      if (response.data.loggedIn == true) {
         setLoginStatus(response.data.user[0].username);
       }
-      // console.log(response);
     });
   }, []);
-
-  // const [show, setShow] = useState(false);
-  // const toggleShow = () => setShow(!show);
 
   const login = () => {
     Axios.post("http://localhost:3001/login", {
@@ -42,11 +35,9 @@ const Login = () => {
   return (
     <>
       <div className="container">
-         <div>{loginStatus}</div>
+        <div>{loginStatus}</div>
         <Card className="card-styling-log card-size shadow">
-          <Card.Header>
-            Prijava
-          </Card.Header>
+          <Card.Header>Prijava</Card.Header>
           <Card.Body>
             <Card.Text>
               <Form>
@@ -73,15 +64,6 @@ const Login = () => {
             </Button>
           </Card.Body>
         </Card>
-        {/* <div>
-          <Toast className="toast" onClose={toggleShow} closeButton animation={false}>
-            <Toast.Header></Toast.Header>
-            <Toast.Body>
-              <h3>{loginStatus}</h3>
-            </Toast.Body>
-          </Toast>
-        </div> */}
-       
       </div>
     </>
   );
