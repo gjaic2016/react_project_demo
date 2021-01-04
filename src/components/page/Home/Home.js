@@ -13,7 +13,7 @@ const Home = () => {
           </Col>
           <Col className="col-md-6">
             <div >
-              <h2>Freelancers guild for quick fix and a quick buck!</h2>
+              <p>Freelancers guild for quick fix and a quick buck!</p>
             </div>
           </Col>
         </Row>

@@ -8,8 +8,13 @@ import About from "./components/page/About";
 import Registration from "./components/page/Registration";
 import Adds from "./components/page/Adds";
 import NotFound from "./components/page/NotFound";
+import { Axios } from "axios";
+
 
 const App = () => {
+  
+    Axios.defaults.withCredentials = true;
+
   return (
     <div className="App">
       <header className="App-header">

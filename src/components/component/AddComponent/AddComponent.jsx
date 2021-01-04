@@ -5,7 +5,7 @@ import noimage from "../../../resources/images/noimage.jpeg";
 const AddComponent = (props) => {
   return (
     <>
-      <Jumbotron className="jumbotron-add">
+      <Jumbotron key={props.id} className="jumbotron-add">
         <Container>
           <Row>
             <Col className="col-md-2">
@@ -17,10 +17,8 @@ const AddComponent = (props) => {
               ></img>
             </Col>
             <Col className="col-md-10">
-              <div>
-                <p>
-                  <h3>{props.title}</h3>
-                </p>
+              <div className="addsTitle">
+                <p>{props.title}</p>
               </div>
               <div className="break-word">
                 <p>{props.description}</p>
