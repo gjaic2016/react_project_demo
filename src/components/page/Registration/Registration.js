@@ -1,6 +1,7 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Button, Card, Form } from "react-bootstrap";
 import Axios from "axios";
+import { Dropdown } from "react-bootstrap";
 
 const Registration = () => {
   const [firstname, setFirstname] = useState("");
@@ -22,6 +23,20 @@ const Registration = () => {
       console.log(response);
     });
   };
+
+  const [countriesList, setCountriesList] = useState([]);
+
+  const handleSelect = (e) => {
+    setCountry(e);
+  };
+
+  useEffect(() => {
+    Axios.get("http://localhost:3001/countries").then((response) => {
+      console.log("Fetch countries trough api...");
+      console.log(response.data);
+      setCountriesList(response.data);
+    });
+  }, []);
 
   return (
     <>
@@ -81,28 +96,39 @@ const Registration = () => {
                 <Form.Group controlId="country">
                   <Form.Control
                     type="text"
-                    placeholder="Unesi kraticu zemlje (HR, CZ...)"
-                    onChange={(e) => setCountry(e.target.value)}
+                    placeholder={country}
                     maxLength="2"
                   />
                 </Form.Group>
               </Form>
-              {/* <Dropdown>
-                <Dropdown.Toggle variant="success" id="dropdown-basic">
+
+              <Dropdown>
+                <Dropdown.Toggle
+                  className="dropdownToggle"
+                  variant="primary"
+                  id="dropdown-basic"
+                >
                   Odaberi zemlju
                 </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item href="#/action-1">Action</Dropdown.Item>
-                  <Dropdown.Item href="#/action-2">
-                    Another action
-                  </Dropdown.Item>
-                  <Dropdown.Item href="#/action-3">
-                    Something else
-                  </Dropdown.Item>
+                <Dropdown.Menu className="dropdownScroll">
+                  {countriesList.map((value) => {
+                    return (
+                      <Dropdown.Item
+                        key={value.id}
+                        onSelect={() => handleSelect(value.country_code)}
+                      >
+                        {value.country_code}
+                        {" - "}
+                        {value.country_name}
+                      </Dropdown.Item>
+                    );
+                  })}
                 </Dropdown.Menu>
-              </Dropdown> */}
+              </Dropdown>
             </Card.Text>
-            <Button variant="primary" onClick={register}>Registriraj</Button>
+            <Button variant="primary" onClick={register}>
+              Registriraj
+            </Button>
           </Card.Body>
         </Card>
       </div>

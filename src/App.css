@@ -115,3 +115,21 @@
   width: 100%;
   height: 100%;
 }
+
+.dropdown{
+  width: 100%;
+}
+
+.dropdownToggle{
+  width: 100%;
+  
+}
+
+.dropdownScroll{
+  height: 300px;
+  overflow-y: scroll;
+}
+
+.dropdown-menu.show {
+ width: 100%;
+}
