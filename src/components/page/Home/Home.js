@@ -5,8 +5,8 @@ import ChartComponent from "../../component/ChartComponent";
 import Axios from "axios";
 
 const Home = () => {
-  const [addsCount, setAddsCount] = useState([]);
-  const [addsArchived, setAddsArchived] = useState([]);
+  const [addsCount, setAddsCount] = useState("");
+  const [addsArchived, setAddsArchived] = useState("");
 
   Axios.defaults.withCredentials = true;
 
@@ -14,7 +14,7 @@ const Home = () => {
     Axios.get("http://localhost:3001/getAddsCount").then((response) => {
       console.log("Fetch counted adds trough api...");
       setAddsCount(response.data[0].ADDS);
-      console.log(response.data[0].ADDS);
+      console.log("GET REQ: " + response.data[0].ADDS);
     });
   }, []);
 
@@ -22,7 +22,7 @@ const Home = () => {
     Axios.get("http://localhost:3001/getAddsCountArchived").then((response) => {
       console.log("Fetch archived adds trough api...");
       setAddsArchived(response.data[0].ARCHIVED);
-      console.log(response.data[0].ARCHIVED);
+      console.log("GET REQ: " + response.data[0].ARCHIVED);
     });
   }, []);
 
@@ -32,19 +32,11 @@ const Home = () => {
         <div className="divSpacing"></div>
         <Row>
           <Col className="col-md-6">
-            <img src={Fix} alt="" width="200px" height="200px"></img>
+            <img src={Fix} alt="" width="250px" height="250px"></img>
           </Col>
           <Col className="col-md-6">
             <div>
-              {/* {addsCount.map((val) => {val.ADDS})} */}
-              {/* {addsCount[0].ADDS}
-              {addsArchived.map((val) => {
-                return <div>{val.ARCHIVED}</div>;
-              })} */}
-              <ChartComponent data={[addsCount, addsArchived]} />
-              {/* {console.log(addsCount)}
-              {console.log(addsArchived)} */}
-              {/* <p>Freelancers guild for quick fix and a quick buck!</p> */}
+              <ChartComponent active={addsCount} inactive={addsArchived} />
             </div>
           </Col>
         </Row>
@@ -52,6 +44,9 @@ const Home = () => {
           <Jumbotron>
             <Container>
               <div>
+                <p>
+                  <h4>Freelancers guild for quick fix and a quick buck!</h4>
+                </p>
                 <p>
                   Pao vam je mobitel, oštetili ste laptop a svjesni ste da su
                   popravci u raznim servisima preskupi. Tražite li rješenje za
