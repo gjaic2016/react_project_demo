@@ -10,6 +10,7 @@ const AddComponent = (props) => {
           <Row>
             <Col className="col-md-2">
               <img
+                className="addPicture"
                 src={props.picture ? props.picture : noimage}
                 alt={props.picture}
                 width="150px"

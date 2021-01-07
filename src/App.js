@@ -8,6 +8,7 @@ import About from "./components/page/About";
 import Registration from "./components/page/Registration";
 import Adds from "./components/page/Adds";
 import NotFound from "./components/page/NotFound";
+import SubmitAdd from './components/page/SubmitAdd/index';
 
 const App = () => {
 
@@ -26,6 +27,7 @@ const App = () => {
       <div className="content body">
         <Switch>
           <Route path="/adds" component={Adds} />
+          <Route path="/submitAdd" component={SubmitAdd} />
           <Route path="/registration" component={Registration} />
           <Route path="/about" component={About} />
           <Route path="/login" component={Login} />

@@ -23,6 +23,14 @@ const NavBar = () => {
               Oglasi
             </Button>
           </Link>
+          <Link to="/submitAdd">
+            <Button
+              variant="dark"
+              className="btn btn-primary-outline navbar_button"
+            >
+              Predaj oglas
+            </Button>
+          </Link>
           <Link to="/about">
             <Button
               variant="dark"
