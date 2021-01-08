@@ -1,19 +1,32 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import Axios from "axios";
 import { Card, Form } from "react-bootstrap";
 import { Button } from "react-bootstrap";
+import ImageUploader from "react-images-upload";
 
 const SubmitAdd = () => {
   const [title, setTitle] = useState("");
   const [description, setDescription] = useState("");
   const [picture, setPicture] = useState("");
-  const [archive, setArchive] = useState("N");
+  const archive = "N";
 
-  const [show, setShow] = useState("");
+  const saveAdd = () => {
+    Axios.post("http://localhost:3001/saveAdd", {
+      title: title,
+      description: description,
+      picture: picture,
+      archive: archive,
+    }).then((response) => {
+      console.log("Save add response: " + response);
+    });
+  };
 
-  const saveAdd = (e) => {
-    setShow(e);
-    console.log(title, description);
+  const onImage = async (image) => {
+    try {
+      setPicture(image[0].name);
+    } catch (error) {
+      console.log("nes ne valja: ", error);
+    }
   };
 
   return (
@@ -43,9 +56,17 @@ const SubmitAdd = () => {
                   />
                 </Form.Group>
               </Form>
-              {title} {description}
-              <div>Upload slike</div>
-              <div>Arhiva setirana u useStateu</div>
+              <Form>
+                <ImageUploader
+                  withIcon={true}
+                  singleImage={true}
+                  withPreview={true}
+                  buttonText="Odaberi sliku"
+                  onChange={onImage}
+                  imgExtension={[".jpg", ".gif", ".png", ".gif"]}
+                  maxFileSize={5242880}
+                />
+              </Form>
             </Card.Text>
             <Button variant="primary" onClick={saveAdd}>
               Predaj oglas
