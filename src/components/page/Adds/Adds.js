@@ -18,7 +18,7 @@ const Adds = () => {
     <>
       <div className="container">
         <div className="divSpacing"></div>
-        Oglasi
+        <h2>Oglasi</h2>
         <div className="divSpacing" />
         {addsList.map((value) => {
           return (

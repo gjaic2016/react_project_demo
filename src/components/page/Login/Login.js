@@ -37,7 +37,7 @@ const Login = () => {
       <div className="container">
         <div>{loginStatus}</div>
         <Card className="card-styling-log card-size shadow">
-          <Card.Header>Prijava</Card.Header>
+          <Card.Header><h2>Prijava</h2></Card.Header>
           <Card.Body>
             <Card.Text>
               <Form>
