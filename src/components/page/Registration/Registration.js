@@ -20,7 +20,7 @@ const Registration = () => {
       password: password,
       country: country,
     }).then((response) => {
-      console.log("KAJ SE TU NALAZI" + response);
+      console.log("Registracija u tijeku... " + response);
     });
   };
 
